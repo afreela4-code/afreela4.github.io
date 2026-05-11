@@ -3,23 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Get in touch with Ultra Running Guide for Everyone. Ask questions about gear, training, or races and connect with the community.">
-  <meta name="keywords" content="contact ultra running, trail running questions, ultra running community, running advice, get in touch">
-  <title>Contact | Ultra Running Guide for Everyone</title>
+  <meta name="description" content="Get in touch with Ultra Running Guide for Everyone. Questions about gear, training, or races welcome.">
+  <title>Contact - Ultra Running Guide for Everyone</title>
   <link rel="stylesheet" href="ultra.css">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JF11EJBG48"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-JF11EJBG48');
-  </script>
 </head>
 <body>
+
   <header>
     <h1>Ultra Running Guide for Everyone</h1>
+    <p class="tagline">By a regular runner, for regular runners.</p>
   </header>
+
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -29,51 +23,61 @@
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
-  <div id="hero" style="background-image: url(contacthero.jpg);">
-  </div>
-  <main>
-    <section class="intro">
+
+  <div id="hero" style="background-image: url('contacthero.jpg');">
+    <div id="hero-content">
       <h2>Get in Touch</h2>
-      <p>Have a question about gear, training, or finding your first race? Send a message and I'll get back to you as soon as I can. You can also reach me directly by email at <a href="mailto:afreela4@asu.edu">afreela4@asu.edu</a>.</p>
+      <p>Questions? Advice? Just say hello.</p>
+    </div>
+  </div>
+
+  <main>
+    <section class="intro container">
+      <h2>Send Me a Message</h2>
+      <p>Have a question about gear, training, races, or anything ultra-related? I'm happy to help. You can also reach me directly at <a href="mailto:adamrfreeland@proton.me">adamrfreeland@proton.me</a>.</p>
     </section>
+
     <div id="columns">
-      <div class="card">
+      <div class="card card--form">
         <h3>Send a Message</h3>
-        <form action="#">
-          <p>
-            <label for="name">Name</label><br>
-            <input type="text" id="name" name="name">
-          </p>
-          <p>
-            <label for="email">Email</label><br>
-            <input type="email" id="email" name="email">
-          </p>
-          <p>
-            <label for="topic">What can I help you with?</label><br>
-            <select id="topic" name="topic">
-              <option value="general">General Question</option>
-              <option value="gear">Gear Advice</option>
-              <option value="training">Training Advice</option>
-              <option value="race">Race Recommendation</option>
-            </select>
-          </p>
-          <p>
-            <label for="message">Message</label><br>
-            <textarea id="message" name="message" rows="6" cols="40"></textarea>
-          </p>
-          <p>
-            <input type="submit" value="Send Message">
-          </p>
+        <form action="#" method="post">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="topic">What can I help with?</label>
+          <select id="topic" name="topic">
+            <option value="general">General Question</option>
+            <option value="gear">Gear Advice</option>
+            <option value="training">Training Advice</option>
+            <option value="race">Race Recommendation</option>
+            <option value="other">Other</option>
+          </select>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+
+          <input type="submit" value="Send Message" class="submit-btn">
         </form>
       </div>
-      <div class="card">
+
+      <div class="card card--side">
         <h3>What to Expect</h3>
-        <p>This site is a one-person operation built around the idea that ultra running should be accessible to everyone. Whether you're trying to figure out what shoes to buy, how to fit training into a packed schedule, or which race to sign up for first, I'm happy to help point you in the right direction. No question is too basic. Everyone starts somewhere.</p>
+        <p>This site is a one-person operation run by a regular ultrarunner. Whether you're a complete beginner or an experienced runner, no question is too basic. I'll get back to you as soon as I can.</p>
+        <p>Everyone starts somewhere — I'm happy to help you on your journey.</p>
+        <div class="contact-direct">
+          <span class="contact-label">Direct Email</span>
+          <a href="mailto:adamrfreeland@proton.me">adamrfreeland@proton.me</a>
+        </div>
       </div>
     </div>
   </main>
+
   <footer>
-    <p>Ultra Running Guide for Everyone &copy; 2026</p>
+    <p>Ultra Running Guide for Everyone &copy; 2026 • Built by a real ultrarunner</p>
   </footer>
+
 </body>
 </html>

@@ -1,77 +1,420 @@
+/* ─── BASE ──────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: Georgia, serif;
-  background-color: #F5F2EC;
+  background-color: #F8F4ED;
   color: #2C2C2A;
+  line-height: 1.7;
 }
 
+/* ─── HEADER ─────────────────────────────────────────────────────── */
 header {
   background-color: #2C2C2A;
   color: #F5F2EC;
   text-align: center;
-  padding: 20px;
+  padding: 42px 20px 36px;
+  border-bottom: 4px solid #3B6D11;
 }
 
+header h1 {
+  margin: 0;
+  font-size: 2.6rem;
+  letter-spacing: 0.03em;
+}
+
+.tagline {
+  font-style: italic;
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 1.05rem;
+  color: rgba(245, 242, 236, 0.7);
+  letter-spacing: 0.02em;
+}
+
+/* ─── NAV ────────────────────────────────────────────────────────── */
 nav {
   background-color: #3B6D11;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
 nav ul {
-  list-style-type: none;
+  list-style: none;
   margin: 0;
   padding: 0;
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 nav ul li {
   display: inline-block;
-  padding: 15px 20px;
 }
 
 nav ul li a {
+  display: block;
+  padding: 14px 22px;
   color: #F5F2EC;
   text-decoration: none;
-  font-size: 1.1em;
+  font-weight: bold;
+  font-family: Georgia, serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 22px;
+  right: 22px;
+  height: 3px;
+  background-color: #E8920A;
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
 }
 
 nav ul li a:hover {
   color: #E8920A;
 }
 
+nav ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+/* ─── HERO ───────────────────────────────────────────────────────── */
 #hero {
-  background-image: url(hero.jpg);
+  min-height: 500px;
+  background-image: url('hero.jpg');
+  background-color: #2C2C2A;
   background-size: cover;
   background-position: center;
-  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  position: relative;
 }
 
+#hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.38);
+}
+
+#hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  padding: 0 24px;
+}
+
+#hero-content h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 0 0 16px;
+  line-height: 1.2;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.01em;
+}
+
+#hero-content p {
+  font-size: 1.15rem;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.88);
+  font-style: italic;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+  max-width: 580px;
+}
+
+/* ─── CONTAINER ──────────────────────────────────────────────────── */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ─── INTRO ──────────────────────────────────────────────────────── */
 .intro {
   text-align: center;
-  padding: 40px 20px;
+  padding: 60px 20px 40px;
+  max-width: 720px;
+  margin: 0 auto;
 }
 
-#columns {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 30px;
-  padding: 20px 40px 40px 40px;
+.intro h2 {
+  font-size: 1.9rem;
+  color: #2C2C2A;
+  margin-bottom: 14px;
 }
 
-.card {
-  background-color: #2C2C2A;
-  color: #F5F2EC;
-  padding: 30px;
-  border-top: 5px solid #C4561A;
+.intro h2::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 3px;
+  background-color: #E8920A;
+  margin: 12px auto 0;
 }
 
-.card h3 {
+.intro p {
+  font-size: 1.1rem;
+  color: #4a4a42;
+  margin-top: 20px;
+  line-height: 1.75;
+}
+
+.intro a {
+  color: #C4561A;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.intro a:hover {
   color: #E8920A;
 }
 
+/* ─── CARDS ──────────────────────────────────────────────────────── */
+#columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  padding: 20px 24px 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 36px 32px;
+  border-radius: 4px;
+  border-top: 4px solid #3B6D11;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  text-align: left;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+}
+
+.card h3 {
+  color: #C4561A;
+  margin-top: 0;
+  margin-bottom: 14px;
+  font-size: 1.5rem;
+  letter-spacing: 0.01em;
+}
+
+.card p {
+  margin: 0 0 14px;
+  color: #3a3a38;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.card p:last-of-type {
+  margin-bottom: 0;
+}
+
+/* ─── RACE TABLE ─────────────────────────────────────────────────── */
+.table-wrap {
+  padding: 0 24px 60px;
+  overflow-x: auto;
+}
+
+.race-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.98rem;
+  background-color: #ffffff;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+.race-table thead tr {
+  background-color: #2C2C2A;
+  color: #F5F2EC;
+  text-align: left;
+  letter-spacing: 0.04em;
+}
+
+.race-table th {
+  padding: 16px 20px;
+  font-weight: bold;
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.race-table td {
+  padding: 16px 20px;
+  color: #3a3a38;
+  border-bottom: 1px solid #eee8dc;
+  vertical-align: top;
+  line-height: 1.6;
+}
+
+.race-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.race-table tbody tr:hover {
+  background-color: #f0ebe0;
+}
+
+.race-table tbody tr td:first-child {
+  color: #C4561A;
+  font-weight: bold;
+}
+
+/* ─── CONTACT FORM ───────────────────────────────────────────────── */
+.card--form form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.card--form label {
+  font-size: 0.85rem;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  color: #2C2C2A;
+  margin-top: 10px;
+}
+
+.card--form input[type="text"],
+.card--form input[type="email"],
+.card--form select,
+.card--form textarea {
+  width: 100%;
+  padding: 11px 14px;
+  font-family: Georgia, serif;
+  font-size: 0.95rem;
+  color: #2C2C2A;
+  background-color: #F8F4ED;
+  border: 1.5px solid #d4cfc6;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card--form input[type="text"]:focus,
+.card--form input[type="email"]:focus,
+.card--form select:focus,
+.card--form textarea:focus {
+  border-color: #3B6D11;
+  box-shadow: 0 0 0 3px rgba(59, 109, 17, 0.12);
+}
+
+.card--form textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+.submit-btn {
+  margin-top: 16px;
+  padding: 13px 28px;
+  background-color: #3B6D11;
+  color: #F5F2EC;
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.06em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: #2e5410;
+  transform: translateY(-2px);
+}
+
+/* ─── CONTACT DIRECT EMAIL ───────────────────────────────────────── */
+.contact-direct {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid #eee8dc;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contact-label {
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #3B6D11;
+}
+
+.contact-direct a {
+  color: #C4561A;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.contact-direct a:hover {
+  color: #E8920A;
+}
+
+/* ─── FOOTER ──────────────────────────────────────────────────────── */
 footer {
   background-color: #2C2C2A;
   color: #F5F2EC;
   text-align: center;
-  padding: 20px;
+  padding: 36px 20px;
+  border-top: 4px solid #3B6D11;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+}
+
+footer p {
+  margin: 0;
+  opacity: 0.75;
+}
+
+/* ─── DESKTOP GRID ───────────────────────────────────────────────── */
+@media (min-width: 768px) {
+  #columns {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 28px;
+    padding: 20px 24px 60px;
+  }
+
+  .card {
+    grid-column: span 2;
+  }
+
+  #columns .card:nth-child(4) {
+    grid-column: 2 / span 2;
+  }
+
+  #columns .card:nth-child(5) {
+    grid-column: 4 / span 2;
+  }
+
+  .card--form {
+    grid-column: span 4;
+  }
+
+  .card--side {
+    grid-column: span 2;
+  }
 }
