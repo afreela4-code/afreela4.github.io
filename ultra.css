@@ -23,7 +23,7 @@ header {
 
 header h1 {
   margin: 0;
-  font-size: 2.6rem;
+  font-size: clamp(1.4rem, 5vw, 2.6rem);
   letter-spacing: 0.03em;
 }
 
@@ -31,7 +31,7 @@ header h1 {
   font-style: italic;
   margin-top: 10px;
   margin-bottom: 0;
-  font-size: 1.05rem;
+  font-size: clamp(0.85rem, 3vw, 1.05rem);
   color: rgba(245, 242, 236, 0.7);
   letter-spacing: 0.02em;
 }
@@ -52,6 +52,7 @@ nav ul {
   text-align: center;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 nav ul li {
@@ -60,7 +61,7 @@ nav ul li {
 
 nav ul li a {
   display: block;
-  padding: 14px 22px;
+  padding: 12px 16px;
   color: #F5F2EC;
   text-decoration: none;
   font-weight: bold;
@@ -75,8 +76,8 @@ nav ul li a::after {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 22px;
-  right: 22px;
+  left: 16px;
+  right: 16px;
   height: 3px;
   background-color: #E8920A;
   transform: scaleX(0);
@@ -93,7 +94,7 @@ nav ul li a:hover::after {
 
 /* ─── HERO ───────────────────────────────────────────────────────── */
 #hero {
-  min-height: 500px;
+  min-height: 420px;
   background-image: url('hero.jpg');
   background-color: #2C2C2A;
   background-size: cover;
@@ -121,7 +122,7 @@ nav ul li a:hover::after {
 }
 
 #hero-content h2 {
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(1.6rem, 5vw, 3rem);
   margin: 0 0 16px;
   line-height: 1.2;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
@@ -129,7 +130,7 @@ nav ul li a:hover::after {
 }
 
 #hero-content p {
-  font-size: 1.15rem;
+  font-size: clamp(0.95rem, 2.5vw, 1.15rem);
   margin: 0 auto;
   color: rgba(255, 255, 255, 0.88);
   font-style: italic;
@@ -147,13 +148,13 @@ nav ul li a:hover::after {
 /* ─── INTRO ──────────────────────────────────────────────────────── */
 .intro {
   text-align: center;
-  padding: 60px 20px 40px;
+  padding: 50px 20px 30px;
   max-width: 720px;
   margin: 0 auto;
 }
 
 .intro h2 {
-  font-size: 1.9rem;
+  font-size: clamp(1.4rem, 4vw, 1.9rem);
   color: #2C2C2A;
   margin-bottom: 14px;
 }
@@ -168,7 +169,7 @@ nav ul li a:hover::after {
 }
 
 .intro p {
-  font-size: 1.1rem;
+  font-size: clamp(0.95rem, 2.5vw, 1.1rem);
   color: #4a4a42;
   margin-top: 20px;
   line-height: 1.75;
@@ -188,15 +189,15 @@ nav ul li a:hover::after {
 #columns {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 28px;
-  padding: 20px 24px 60px;
+  gap: 20px;
+  padding: 20px 16px 60px;
   max-width: 1100px;
   margin: 0 auto;
 }
 
 .card {
   background-color: #ffffff;
-  padding: 36px 32px;
+  padding: 28px 24px;
   border-radius: 4px;
   border-top: 4px solid #3B6D11;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
@@ -213,8 +214,18 @@ nav ul li a:hover::after {
   color: #C4561A;
   margin-top: 0;
   margin-bottom: 14px;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   letter-spacing: 0.01em;
+}
+
+.card h3 a {
+  color: #C4561A;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.card h3 a:hover {
+  color: #E8920A;
 }
 
 .card p {
@@ -230,14 +241,16 @@ nav ul li a:hover::after {
 
 /* ─── RACE TABLE ─────────────────────────────────────────────────── */
 .table-wrap {
-  padding: 0 24px 60px;
+  padding: 0 16px 60px;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .race-table {
   width: 100%;
+  min-width: 520px;
   border-collapse: collapse;
-  font-size: 0.98rem;
+  font-size: 0.95rem;
   background-color: #ffffff;
   border-radius: 4px;
   overflow: hidden;
@@ -252,15 +265,15 @@ nav ul li a:hover::after {
 }
 
 .race-table th {
-  padding: 16px 20px;
+  padding: 14px 16px;
   font-weight: bold;
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
 
 .race-table td {
-  padding: 16px 20px;
+  padding: 14px 16px;
   color: #3a3a38;
   border-bottom: 1px solid #eee8dc;
   vertical-align: top;
@@ -390,8 +403,21 @@ footer p {
   opacity: 0.75;
 }
 
-/* ─── DESKTOP GRID ───────────────────────────────────────────────── */
-@media (min-width: 768px) {
+/* ─── TABLET ─────────────────────────────────────────────────────── */
+@media (min-width: 600px) {
+  #columns {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    padding: 20px 20px 60px;
+  }
+
+  .card {
+    grid-column: span 1;
+  }
+}
+
+/* ─── DESKTOP ────────────────────────────────────────────────────── */
+@media (min-width: 900px) {
   #columns {
     grid-template-columns: repeat(6, 1fr);
     gap: 28px;
