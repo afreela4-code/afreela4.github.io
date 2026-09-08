@@ -1,3 +1,4 @@
+/* card-center-v2 */
 /* ─── BASE ──────────────────────────────────────────────────────── */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -205,7 +206,8 @@ nav ul li a:hover::after {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
   text-align: left;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-  flex: 1 1 100%;
+  flex: 0 1 100%;
+  width: 100%;
   max-width: 100%;
   box-sizing: border-box;
 }
@@ -416,7 +418,8 @@ footer p {
   }
 
   .card {
-    flex: 1 1 calc(50% - 12px);
+    flex: 0 0 calc(50% - 12px);
+    width: calc(50% - 12px);
     max-width: calc(50% - 12px);
   }
 }
@@ -429,18 +432,21 @@ footer p {
   }
 
   .card {
-    flex: 0 1 calc(33.333% - 19px);
-    max-width: calc(33.333% - 19px);
+    flex: 0 0 calc((100% - 56px) / 3);
+    width: calc((100% - 56px) / 3);
+    max-width: calc((100% - 56px) / 3);
   }
 
   .card--form {
-    flex: 1 1 calc(66.666% - 14px);
-    max-width: calc(66.666% - 14px);
+    flex: 0 0 calc((100% - 28px) * 2 / 3);
+    width: calc((100% - 28px) * 2 / 3);
+    max-width: calc((100% - 28px) * 2 / 3);
   }
 
   .card--side {
-    flex: 0 1 calc(33.333% - 19px);
-    max-width: calc(33.333% - 19px);
+    flex: 0 0 calc((100% - 56px) / 3);
+    width: calc((100% - 56px) / 3);
+    max-width: calc((100% - 56px) / 3);
   }
 }
 /* ─── GUIDE PAGES ───────────────────────────────────────────────── */
