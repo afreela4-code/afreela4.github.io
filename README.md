@@ -26,3 +26,12 @@ The contact form posts through [FormSubmit](https://formsubmit.co/) to `adamrfre
 - `about.html` — about
 - `race-week.html` — race week
 - `recovery.html` — recovery & injury prevention
+
+## Growth checklist (Search Console)
+1. Add property `https://ultrarunningforeveryone.com/` in Google Search Console.
+2. Verify ownership (DNS or HTML tag).
+3. Submit `https://ultrarunningforeveryone.com/sitemap.xml`.
+4. Confirm Analytics (`G-JF11EJBG48`) is receiving traffic.
+5. Share flagship guides in run communities with a real story, not spam links.
+
+New pages: `back-to-back-long-runs.html`, `beginner-ultra-vest.html`, `get-the-plan.html`.

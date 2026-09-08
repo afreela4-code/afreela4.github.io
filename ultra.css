@@ -95,7 +95,7 @@ nav ul li a:hover::after {
 /* ─── HERO ───────────────────────────────────────────────────────── */
 #hero {
   min-height: 420px;
-  background-image: url('hero.jpg');
+  background-image: url('hero.webp');
   background-color: #2C2C2A;
   background-size: cover;
   background-position: center;
@@ -830,4 +830,13 @@ summary:focus-visible {
   a[href]::after {
     content: "";
   }
+}
+
+
+.updated {
+  text-align: center;
+  color: #6a6a62;
+  font-size: 0.85rem;
+  margin: 18px 0 0;
+  letter-spacing: 0.04em;
 }
