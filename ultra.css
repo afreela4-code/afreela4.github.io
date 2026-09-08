@@ -444,3 +444,105 @@ footer p {
     grid-column: span 2;
   }
 }
+/* ─── GUIDE PAGES ───────────────────────────────────────────────── */
+.hero--compact {
+  min-height: 280px;
+}
+
+.guide-body {
+  max-width: 800px;
+  padding: 10px 20px 60px;
+}
+
+.guide-body h3 {
+  color: #C4561A;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.35rem;
+}
+
+.guide-body p,
+.guide-body li {
+  color: #3a3a38;
+  line-height: 1.75;
+}
+
+.guide-body a {
+  color: #C4561A;
+}
+
+.guide-body a:hover {
+  color: #E8920A;
+}
+
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 1.5rem;
+}
+
+.checklist li {
+  position: relative;
+  padding: 12px 14px 12px 44px;
+  margin-bottom: 10px;
+  background: #fff;
+  border-radius: 4px;
+  border-left: 4px solid #3B6D11;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.checklist li::before {
+  content: "☐";
+  position: absolute;
+  left: 14px;
+  top: 12px;
+  color: #3B6D11;
+  font-size: 1.1rem;
+}
+
+.callout {
+  background: #fff8e8;
+  border: 1px solid #e8d5a8;
+  border-left: 4px solid #E8920A;
+  border-radius: 4px;
+  padding: 16px 18px;
+  margin: 1.5rem 0;
+}
+
+.callout p {
+  margin: 0;
+}
+
+.faq {
+  background: #fff;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  padding: 12px 16px;
+}
+
+.faq summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: #2C2C2A;
+}
+
+.faq p {
+  margin: 10px 0 4px;
+}
+
+.guide-next {
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #eee8dc;
+  font-weight: bold;
+}
+
+.plan-table {
+  font-size: 0.88rem;
+  min-width: 640px;
+}
+
+.plan-table td:first-child {
+  white-space: nowrap;
+}
