@@ -1,37 +1,31 @@
 # Ultra Running Guide for Everyone
 
-Static site for [ultrarunningforeveryone.com](https://ultrarunningforeveryone.com/) — practical gear, training, and race advice for everyday ultrarunners.
+**Live site:** [ultrarunningforeveryone.com](https://ultrarunningforeveryone.com/)
 
-## Pages
+Practical ultra advice for people with jobs and families — first 50K readiness, a busy-life 16-week plan, gear, fueling, race week, and recovery. Built as a real resource for runners (and a live web project in my portfolio).
 
-- `index.html` — Home
-- `gear.html` — Gear
-- `training.html` — Training
-- `races.html` — Races
-- `contact.html` — Contact
+**Start here:** [Am I ready for a 50K?](https://ultrarunningforeveryone.com/ready-for-50k.html) · [16-week plan](https://ultrarunningforeveryone.com/first-50k-plan.html) · [Get the plan](https://ultrarunningforeveryone.com/get-the-plan.html)
 
-Hosted with GitHub Pages from this repo (`main` branch, site root). Custom domain: `ultrarunningforeveryone.com`.
+## Share blurb (copy/paste)
 
-## Contact form
+> I built Ultrarunning for Everyone for busy people chasing a first 50K — readiness checklist, a 16-week plan that survives work and family, plus gear, fueling, and race-week guides.  
+> https://ultrarunningforeveryone.com/
 
-The contact form posts through [FormSubmit](https://formsubmit.co/) to `adamrfreeland@proton.me`. The first submission triggers a one-time confirmation email from FormSubmit — open that link once so messages start arriving.
+## Site map
 
-## Flagship guides
+- Home, Gear, Training, Races, About, Contact
+- Guides: readiness, 16-week plan, fueling, gear checklist, pick a race, race week, recovery, back-to-backs, beginner vest, get-the-plan
 
-- `ready-for-50k.html` — readiness checklist
-- `first-50k-plan.html` — 16-week first 50K plan
-- `fueling-101.html` — fueling basics
-- `first-ultra-gear.html` — first-ultra gear checklist
-- `pick-first-race.html` — how to pick your first race
-- `about.html` — about
-- `race-week.html` — race week
-- `recovery.html` — recovery & injury prevention
+Hosted on GitHub Pages (`main`, site root). Custom domain: `ultrarunningforeveryone.com`.
+
+## Contact / plan email
+
+Forms use [FormSubmit](https://formsubmit.co/) to `adamrfreeland@proton.me`. First submission needs a one-time confirmation email.
 
 ## Growth checklist (Search Console)
-1. Add property `https://ultrarunningforeveryone.com/` in Google Search Console.
-2. Verify ownership (DNS or HTML tag).
-3. Submit `https://ultrarunningforeveryone.com/sitemap.xml`.
-4. Confirm Analytics (`G-JF11EJBG48`) is receiving traffic.
-5. Share flagship guides in run communities with a real story, not spam links.
 
-New pages: `back-to-back-long-runs.html`, `beginner-ultra-vest.html`, `get-the-plan.html`.
+1. Add property `https://ultrarunningforeveryone.com/` in [Google Search Console](https://search.google.com/search-console).
+2. Verify ownership (DNS TXT or HTML tag).
+3. Submit sitemap: `https://ultrarunningforeveryone.com/sitemap.xml`.
+4. Confirm Analytics (`G-JF11EJBG48`) is receiving traffic.
+5. Share flagship guides with a real story — not bare link spam.
