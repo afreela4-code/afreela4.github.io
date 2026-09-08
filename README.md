@@ -23,3 +23,6 @@ The contact form posts through [FormSubmit](https://formsubmit.co/) to `adamrfre
 - `fueling-101.html` — fueling basics
 - `first-ultra-gear.html` — first-ultra gear checklist
 - `pick-first-race.html` — how to pick your first race
+- `about.html` — about
+- `race-week.html` — race week
+- `recovery.html` — recovery & injury prevention
