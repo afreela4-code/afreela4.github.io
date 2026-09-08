@@ -710,3 +710,124 @@ nav ul li a::after {
 .guide-cards + .intro {
   padding-top: 20px;
 }
+
+
+/* ─── SKIP LINK ─────────────────────────────────────────────────── */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: #E8920A;
+  color: #2C2C2A;
+  padding: 8px 14px;
+  z-index: 1000;
+  font-weight: bold;
+}
+.skip-link:focus {
+  left: 12px;
+  top: 12px;
+}
+
+/* ─── JOURNEY PATH ──────────────────────────────────────────────── */
+.journey {
+  background: #24331a;
+  border-bottom: 1px solid rgba(245,242,236,0.12);
+}
+.journey ol {
+  list-style: none;
+  margin: 0 auto;
+  padding: 10px 12px;
+  max-width: 1100px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  justify-content: center;
+}
+.journey a {
+  color: rgba(245,242,236,0.88);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(245,242,236,0.22);
+}
+.journey a:hover,
+.journey a:focus {
+  color: #E8920A;
+  border-color: #E8920A;
+  outline: none;
+}
+
+/* ─── VISUAL POLISH ─────────────────────────────────────────────── */
+body {
+  text-rendering: optimizeLegibility;
+}
+header {
+  padding: 48px 20px 40px;
+}
+#hero::before {
+  background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.55));
+}
+.card {
+  border-radius: 8px;
+}
+.card h3 {
+  letter-spacing: 0.02em;
+}
+.intro h2 {
+  letter-spacing: 0.01em;
+}
+.guide-body {
+  font-size: 1.05rem;
+}
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 3px solid #E8920A;
+  outline-offset: 2px;
+}
+
+.print-actions {
+  margin: 0 0 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+.print-hint {
+  color: #4a4a42;
+  font-size: 0.9rem;
+}
+.print-plan {
+  margin-top: 0;
+}
+
+@media print {
+  .site-nav,
+  .journey,
+  .skip-link,
+  header,
+  footer,
+  #hero,
+  .no-print,
+  .print-actions {
+    display: none !important;
+  }
+  body {
+    background: white;
+    color: black;
+  }
+  .guide-body {
+    max-width: none;
+    padding: 0;
+  }
+  .race-table {
+    box-shadow: none;
+    min-width: 0;
+  }
+  a[href]::after {
+    content: "";
+  }
+}
