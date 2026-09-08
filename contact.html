@@ -22,8 +22,15 @@
     <p class="tagline">By a regular runner, for regular runners.</p>
   </header>
 
-  <nav>
-    <ul>
+  <nav class="site-nav" aria-label="Primary">
+    <div class="nav-bar">
+      <a class="nav-brand" href="index.html">Ultra Running Guide</a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-menu">
+        <span class="nav-toggle-label">Menu</span>
+        <span class="nav-toggle-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+    <ul id="site-menu">
       <li><a href="index.html">Home</a></li>
       <li><a href="gear.html">Gear</a></li>
       <li><a href="training.html">Training</a></li>
@@ -97,7 +104,33 @@
 
   <footer>
     <p>Ultra Running Guide for Everyone &copy; 2026 • Built by a real ultrarunner</p>
+    <p class="footer-links">
+      <a href="ready-for-50k.html">Am I ready?</a> ·
+      <a href="first-50k-plan.html">16-week plan</a> ·
+      <a href="fueling-101.html">Fueling</a> ·
+      <a href="first-ultra-gear.html">Gear checklist</a> ·
+      <a href="pick-first-race.html">Pick a race</a>
+    </p>
   </footer>
 
+
+  <script>
+    (function () {
+      var nav = document.querySelector('.site-nav');
+      var btn = document.querySelector('.nav-toggle');
+      var menu = document.getElementById('site-menu');
+      if (!nav || !btn || !menu) return;
+      btn.addEventListener('click', function () {
+        var open = nav.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          nav.classList.remove('is-open');
+          btn.setAttribute('aria-expanded', 'false');
+        });
+      });
+    })();
+  </script>
 </body>
 </html>

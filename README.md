@@ -21,3 +21,5 @@ The contact form posts through [FormSubmit](https://formsubmit.co/) to `adamrfre
 - `ready-for-50k.html` — readiness checklist
 - `first-50k-plan.html` — 16-week first 50K plan
 - `fueling-101.html` — fueling basics
+- `first-ultra-gear.html` — first-ultra gear checklist
+- `pick-first-race.html` — how to pick your first race
