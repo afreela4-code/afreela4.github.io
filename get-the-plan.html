@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Meet the everyday ultrarunner behind Ultra Running Guide for Everyone — practical advice for busy people chasing their first ultra.">
-  <meta name="keywords" content="about ultra running guide, adam freeland ultrarunner">
-  <title>About | Ultra Running Guide for Everyone</title>
+  <meta name="description" content="Email yourself the link to the busy-life 16-week first 50K training plan, or open and print it as a PDF from your browser.">
+  <meta name="keywords" content="16 week 50k plan pdf, email ultra training plan, beginner 50k plan download">
+  <title>Get the 16-Week First 50K Plan | Ultra Running Guide for Everyone</title>
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Ultra Running Guide for Everyone">
-  <meta property="og:title" content="About | Ultra Running Guide for Everyone">
-  <meta property="og:description" content="Meet the everyday ultrarunner behind Ultra Running Guide for Everyone — practical advice for busy people chasing their first ultra.">
-  <meta property="og:url" content="https://ultrarunningforeveryone.com/about.html">
+  <meta property="og:title" content="Get the 16-Week First 50K Plan | Ultra Running Guide for Everyone">
+  <meta property="og:description" content="Email yourself the link to the busy-life 16-week first 50K training plan, or open and print it as a PDF from your browser.">
+  <meta property="og:url" content="https://ultrarunningforeveryone.com/get-the-plan.html">
   <meta property="og:image" content="https://ultrarunningforeveryone.com/og-share.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="About | Ultra Running Guide for Everyone">
-  <meta name="twitter:description" content="Meet the everyday ultrarunner behind Ultra Running Guide for Everyone — practical advice for busy people chasing their first ultra.">
+  <meta name="twitter:title" content="Get the 16-Week First 50K Plan | Ultra Running Guide for Everyone">
+  <meta name="twitter:description" content="Email yourself the link to the busy-life 16-week first 50K training plan, or open and print it as a PDF from your browser.">
   <meta name="twitter:image" content="https://ultrarunningforeveryone.com/og-share.jpg">
   <link rel="stylesheet" href="ultra.css">
   <!-- Google tag (gtag.js) -->
@@ -25,6 +25,7 @@
     gtag('js', new Date());
     gtag('config', 'G-JF11EJBG48');
   </script>
+
 </head>
 <body>
 
@@ -62,30 +63,44 @@
     </ol>
   </nav>
 
-  <div id="hero" class="hero--compact" style="background-image: url('hero.webp');">
+  <div id="hero" class="hero--compact" style="background-image: url('traininghero.webp');">
     <div id="hero-content">
-      <h2>Built by a Regular Runner</h2>
-      <p>Job. Family. Miles when life allows.</p>
+      <h2>Get the 16-Week Plan</h2>
+      <p>Open it, print it, or email yourself the link.</p>
     </div>
   </div>
 
   <main id="main" class="guide">
+<p class="updated">Updated September 8, 2026</p>
     <section class="intro container">
-      <h2>Why this site exists</h2>
-      <p>Most ultra advice assumes unlimited time, a coach budget, and a perfect training calendar. Real life is messier. This site is for people balancing work and family who still want to finish a first 50K without pretending they are professionals.</p>
+      <h2>Take the plan with you</h2>
+      <p>The full week-by-week framework lives at <a href="first-50k-plan.html">first-50k-plan.html</a>. Use Print / Save as PDF on that page, or send yourself a reminder link below.</p>
     </section>
     <article class="guide-body container">
-      <h3>Who’s writing</h3>
-      <p>I’m Adam — an everyday ultrarunner figuring this out while holding down a full-time job and raising a family. My first ultra was the Vernal Equinox. I care more about finishable plans than fancy metrics.</p>
-      <h3>What you can trust me on</h3>
-      <ul>
-        <li>Practical gear and fueling over hype</li>
-        <li>Training that survives kids’ games and late meetings</li>
-        <li>Choosing races you can actually finish</li>
-      </ul>
-      <h3>What this is not</h3>
-      <p>Medical advice, coaching contracts, or elite secrets. If something hurts in a bad way, talk to a clinician. Use the guides as a starting framework and adapt them to your body and calendar.</p>
-      <p class="guide-next">Start the path: <a href="ready-for-50k.html">Am I ready?</a> · <a href="contact.html">Say hello</a></p>
+      <div class="card card--form" style="max-width:520px;margin:0 auto 2rem;">
+        <h3>Email me the plan link</h3>
+        <p>Uses the same FormSubmit flow as the contact form. First time, confirm the email FormSubmit sends you.</p>
+        <form action="https://formsubmit.co/adamrfreeland@proton.me" method="POST">
+          <input type="hidden" name="_subject" value="Send me the 16-week 50K plan link">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://ultrarunningforeveryone.com/get-the-plan.html?sent=1">
+          <input type="hidden" name="plan_url" value="https://ultrarunningforeveryone.com/first-50k-plan.html">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+          <label for="email">Your email</label>
+          <input type="email" id="email" name="email" required placeholder="you@example.com">
+          <label for="name">Name (optional)</label>
+          <input type="text" id="name" name="name" placeholder="First name">
+          <input type="submit" value="Email me the link" class="submit-btn">
+        </form>
+        <p id="plan-sent" style="display:none;color:#0a7;font-weight:600;margin-top:12px;">Request sent — check your inbox (and spam) for the FormSubmit confirmation if it is your first time.</p>
+        <script>
+          if (new URLSearchParams(location.search).get('sent') === '1') {
+            document.getElementById('plan-sent').style.display = 'block';
+          }
+        </script>
+      </div>
+      <p class="guide-next"><a href="first-50k-plan.html">Open the plan now</a> · <a href="ready-for-50k.html">Am I ready?</a></p>
     </article>
 
   </main>
@@ -106,7 +121,6 @@
       <a href="about.html">About</a>
     </p>
   </footer>
-
   <script>
     (function () {
       var nav = document.querySelector('.site-nav');
@@ -125,6 +139,5 @@
       });
     })();
   </script>
-
 </body>
 </html>
