@@ -6,6 +6,14 @@
   <meta name="description" content="Get in touch with Ultra Running Guide for Everyone. Questions about gear, training, or races welcome.">
   <title>Contact - Ultra Running Guide for Everyone</title>
   <link rel="stylesheet" href="ultra.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JF11EJBG48"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JF11EJBG48');
+  </script>
 </head>
 <body>
 
@@ -34,13 +42,25 @@
   <main>
     <section class="intro container">
       <h2>Send Me a Message</h2>
+      <p id="contact-sent" style="display:none;color:#0a7;font-weight:600;">Thanks — your message was sent. I&apos;ll get back to you soon.</p>
+      <script>
+        if (new URLSearchParams(location.search).get('sent') === '1') {
+          document.getElementById('contact-sent').style.display = 'block';
+        }
+      </script>
       <p>Have a question about gear, training, races, or anything ultra-related? I'm happy to help. You can also reach me directly at <a href="mailto:adamrfreeland@proton.me">adamrfreeland@proton.me</a>.</p>
     </section>
 
     <div id="columns">
       <div class="card card--form">
         <h3>Send a Message</h3>
-        <form action="#" method="post">
+        <form action="https://formsubmit.co/adamrfreeland@proton.me" method="POST">
+          <input type="hidden" name="_subject" value="Ultra Running Guide — contact form">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://ultrarunningforeveryone.com/contact.html?sent=1">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
           <label for="name">Your Name</label>
           <input type="text" id="name" name="name" required>
 
