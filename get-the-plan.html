@@ -95,9 +95,29 @@
         </form>
         <p id="plan-sent" style="display:none;color:#0a7;font-weight:600;margin-top:12px;">Request sent — check your inbox (and spam) for the FormSubmit confirmation if it is your first time.</p>
         <script>
-          if (new URLSearchParams(location.search).get('sent') === '1') {
-            document.getElementById('plan-sent').style.display = 'block';
-          }
+          (function () {
+            var form = document.querySelector('.card--form form');
+            if (form) {
+              form.addEventListener('submit', function () {
+                if (typeof gtag === 'function') {
+                  gtag('event', 'generate_lead', {
+                    method: 'formsubmit',
+                    lead_source: 'get_the_plan'
+                  });
+                }
+              });
+            }
+            if (new URLSearchParams(location.search).get('sent') === '1') {
+              var note = document.getElementById('plan-sent');
+              if (note) note.style.display = 'block';
+              if (typeof gtag === 'function') {
+                gtag('event', 'generate_lead', {
+                  method: 'formsubmit_success',
+                  lead_source: 'get_the_plan'
+                });
+              }
+            }
+          })();
         </script>
       </div>
       <p class="guide-next"><a href="first-50k-plan.html">Open the plan now</a> · <a href="ready-for-50k.html">Am I ready?</a></p>
