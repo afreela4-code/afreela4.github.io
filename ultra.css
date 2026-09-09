@@ -18,7 +18,7 @@ header {
   background-color: #2C2C2A;
   color: #F5F2EC;
   text-align: center;
-  padding: 42px 20px 36px;
+  padding: 28px 20px 20px;
   border-bottom: 4px solid #3B6D11;
 }
 
@@ -95,7 +95,7 @@ nav ul li a:hover::after {
 
 /* ─── HERO ───────────────────────────────────────────────────────── */
 #hero {
-  min-height: 420px;
+  min-height: 320px;
   background-image: url('hero.webp');
   background-color: #2C2C2A;
   background-size: cover;
@@ -149,15 +149,19 @@ nav ul li a:hover::after {
 /* ─── INTRO ──────────────────────────────────────────────────────── */
 .intro {
   text-align: center;
-  padding: 50px 20px 30px;
+  padding: 28px 20px 12px;
   max-width: 720px;
   margin: 0 auto;
+}
+
+.intro + .intro {
+  padding-top: 8px;
 }
 
 .intro h2 {
   font-size: clamp(1.4rem, 4vw, 1.9rem);
   color: #2C2C2A;
-  margin-bottom: 14px;
+  margin-bottom: 8px;
 }
 
 .intro h2::after {
@@ -166,14 +170,14 @@ nav ul li a:hover::after {
   width: 48px;
   height: 3px;
   background-color: #E8920A;
-  margin: 12px auto 0;
+  margin: 8px auto 0;
 }
 
 .intro p {
   font-size: clamp(0.95rem, 2.5vw, 1.1rem);
   color: #4a4a42;
-  margin-top: 20px;
-  line-height: 1.75;
+  margin-top: 12px;
+  line-height: 1.65;
 }
 
 .intro a {
@@ -192,15 +196,15 @@ nav ul li a:hover::after {
   flex-wrap: wrap;
   justify-content: center;
   align-items: stretch;
-  gap: 20px;
-  padding: 20px 16px 60px;
+  gap: 16px;
+  padding: 8px 16px 36px;
   max-width: 1100px;
   margin: 0 auto;
 }
 
 .card {
   background-color: #ffffff;
-  padding: 28px 24px;
+  padding: 22px 20px;
   border-radius: 4px;
   border-top: 4px solid #3B6D11;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
@@ -399,7 +403,7 @@ footer {
   background-color: #2C2C2A;
   color: #F5F2EC;
   text-align: center;
-  padding: 36px 20px;
+  padding: 24px 20px;
   border-top: 4px solid #3B6D11;
   font-size: 0.9rem;
   letter-spacing: 0.04em;
@@ -414,7 +418,7 @@ footer p {
 @media (min-width: 600px) {
   #columns {
     gap: 24px;
-    padding: 20px 20px 60px;
+    padding: 8px 20px 36px;
   }
 
   .card {
@@ -428,7 +432,7 @@ footer p {
 @media (min-width: 900px) {
   #columns {
     gap: 28px;
-    padding: 20px 24px 60px;
+    padding: 8px 24px 36px;
   }
 
   .card {
@@ -451,18 +455,18 @@ footer p {
 }
 /* ─── GUIDE PAGES ───────────────────────────────────────────────── */
 .hero--compact {
-  min-height: 280px;
+  min-height: 160px;
 }
 
 .guide-body {
   max-width: 800px;
-  padding: 10px 20px 60px;
+  padding: 10px 20px 36px;
 }
 
 .guide-body h3 {
   color: #C4561A;
-  margin-top: 2rem;
-  margin-bottom: 0.75rem;
+  margin-top: 1.35rem;
+  margin-bottom: 0.5rem;
   font-size: 1.35rem;
 }
 
@@ -770,7 +774,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 header {
-  padding: 48px 20px 40px;
+  padding: 32px 20px 24px;
 }
 #hero::before {
   background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.55));
