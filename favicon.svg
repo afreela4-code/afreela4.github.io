@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Ultra Running Guide">
+  <circle cx="32" cy="32" r="30" fill="#F5F2EC"/>
+  <path fill="#3B6D11" d="M8 48 L28 14 L36 26 L44 16 L56 48 Z"/>
+  <path fill="none" stroke="#E8920A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" d="M22 46 C26 40, 28 36, 30 30 C32 24, 34 22, 36 18"/>
+</svg>
